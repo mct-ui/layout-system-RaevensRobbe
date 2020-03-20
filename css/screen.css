@@ -17,6 +17,13 @@ html {
     line-height: 1.5;
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     color: #111;
+    box-sizing:border-box;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
 }
 
 /*
@@ -239,27 +246,44 @@ a:focus {
 
 /* reverse horizontal row modifier */
 
-.o-layout--row-reverse {}
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
 
 /* Horizontal alignment modifiers*/
 
 .o-layout--justify-start {}
 
-.o-layout--justify-end {}
+.o-layout--justify-end{
+    flex-direction: row-reverse;
+}
 
-.o-layout--justify-center {}
+.o-layout--justify-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.o-layout--justify-space-around {}
+.o-layout--justify-space-around {
+    justify-content: space-around;
 
-.o-layout--justify-space-between {}
+}
+
+.o-layout--justify-space-between {
+    justify-content: space-between;
+}
 
 /* Vertical item alignment modifiers */
 
 .o-layout--align-start {}
 
-.o-layout--align-end {}
+.o-layout--align-end {
+    align-items: flex-end;
+}
 
-.o-layout--align-center {}
+.o-layout--align-center {
+    align-items: center;
+}
 
 .o-layout--align-baseline {}
 
@@ -403,6 +427,34 @@ a:focus {
 
 .u-5-of-6 {
     flex-basis: calc(100%/6*5) !important;
+}
+
+.u-1-of-2-bp1 {
+    flex-basis: calc(100%/2) !important;
+}
+
+.u-1-of-2-bp2 {
+    flex-basis: calc(100%/2) !important;
+}
+
+.u-1-of-3-bp3 {
+    flex-basis: calc(100%/3) !important;
+}
+
+.u-1-of-4-bp4 {
+    flex-basis: calc(100%/4) !important;
+}
+
+.u-1-of-5-bp5 {
+    flex-basis: calc(100%/5) !important;
+}
+
+.u-1-of-6-bp6 {
+    flex-basis: calc(100%/6) !important;
+}
+
+.u-1-of-4-bp2 {
+    flex-basis: calc(100%/4) !important;
 }
 
 @media (min-width: 576px) {
