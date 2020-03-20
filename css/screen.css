@@ -252,7 +252,9 @@ a:focus {
 
 /* Horizontal alignment modifiers*/
 
-.o-layout--justify-start {}
+.o-layout--justify-start {
+    flex-direction: row;
+}
 
 .o-layout--justify-end{
     flex-direction: row-reverse;
@@ -273,9 +275,15 @@ a:focus {
     justify-content: space-between;
 }
 
+.o-layout--justify-space-evenly {
+    justify-content: spa;
+}
+
 /* Vertical item alignment modifiers */
 
-.o-layout--align-start {}
+.o-layout--align-start {
+    align-items: flex-start;
+}
 
 .o-layout--align-end {
     align-items: flex-end;
@@ -285,19 +293,31 @@ a:focus {
     align-items: center;
 }
 
-.o-layout--align-baseline {}
+.o-layout--align-baseline {
+    align-items: baseline;
+}
 
 /* Vertical content alignment modifiers. Only work if there is one than one flex item */
 
-.o-layout--align-content-start {}
+.o-layout--align-content-start {
+    align-content: start;
+}
 
-.o-layout--align-content-end {}
+.o-layout--align-content-end {
+    align-content: end;
+}
 
-.o-layout--align-content-center {}
+.o-layout--align-content-center {
+    align-content: center;
+}
 
-.o-layout--align-content-space-around {}
+.o-layout--align-content-space-around {
+    align-content: space-around;
+}
 
-.o-layout--align-content-space-between {}
+.o-layout--align-content-space-between {
+    align-content: space-between;
+}
 
 
 /*------------------------------------*\
@@ -309,7 +329,40 @@ a:focus {
     ---
     Component description
 */
+.c-author {
+    display: flex;
+    align-items: center;
+}
 
+.c-author__image{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}
+
+.c-author__name,
+.c-author__meta {
+    margin-bottom: 0;
+}
+
+.c-author__meta {
+    font-size: 14px;
+    font-family: "Inter Web", "Helvetica Neue", Helvetica, arial, sans-serif;
+    line-height: 24px;
+}
+
+.c-author__name{
+    color:black;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.c-author__image{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 16px;
+}
 
 /*
     Component: layout block
